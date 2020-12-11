@@ -1,0 +1,34 @@
+---
+title: ProgressBar コントロール
+ms.date: 03/30/2017
+helpviewer_keywords:
+- progress controls
+- ProgressBar control [Windows Forms]
+ms.assetid: 5be6b642-e8a6-4565-8ebd-ae73c7b10dc9
+ms.openlocfilehash: 177db058e1df49e5b9ee5541f8fc074881f3f72c
+ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96974389"
+---
+# <a name="progressbar-control-windows-forms"></a>ProgressBar コントロール (Windows フォーム)
+> [!IMPORTANT]
+> <xref:System.Windows.Forms.ToolStripProgressBar> コントロールは、<xref:System.Windows.Forms.ProgressBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ProgressBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
+  
+ Windows フォームコントロールは、 <xref:System.Windows.Forms.ProgressBar> 適切な数の四角形を水平バーに表示することによって、アクションの進行状況を示します。 アクションが完了すると、バーは塗りつぶされます。 多くの場合、進行状況バーは、時間スプールアクションの完了を待機する時間をユーザーに示すために使用されます。たとえば、大きなファイルが読み込まれている場合などです。  
+  
+## <a name="in-this-section"></a>このセクションの内容  
+ [ProgressBar コントロールの概要](progressbar-control-overview-windows-forms.md)  
+ コントロールの全般的な概念を紹介し <xref:System.Windows.Forms.ProgressBar> ます。これにより、操作の進行状況をグラフィカルに表示できます。  
+  
+ [方法: Windows フォーム ProgressBar コントロールによって表示される値を設定する](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
+ コントロールによって表示される値を増やすさまざまな方法について説明し <xref:System.Windows.Forms.ProgressBar> ます。  
+  
+## <a name="reference"></a>リファレンス  
+ <xref:System.Windows.Forms.ProgressBar>  
+ クラスとそのメンバーに関するリファレンス情報を提供します。  
+  
+## <a name="related-sections"></a>関連項目  
+ [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
+ Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。
