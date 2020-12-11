@@ -1,0 +1,47 @@
+---
+title: '方法: クロックの状態が変化したときに通知を受け取る'
+ms.date: 03/30/2017
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- clocks [WPF], notification of state changes
+- notifications [WPF], clocks' state changes
+ms.assetid: ecb10fc9-d0c2-45c3-b0a1-7b11baa733da
+ms.openlocfilehash: dc3fffb88ce59ceb908d6febd2f078820513b641
+ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96979903"
+---
+# <a name="how-to-receive-notification-when-a-clocks-state-changes"></a><span data-ttu-id="b7782-102">方法: クロックの状態が変化したときに通知を受け取る</span><span class="sxs-lookup"><span data-stu-id="b7782-102">How to: Receive Notification When a Clock's State Changes</span></span>
+<span data-ttu-id="b7782-103">クロックの <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> イベントは、クロックが開始または停止されるなど、その <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> が無効になったときに発生します。</span><span class="sxs-lookup"><span data-stu-id="b7782-103">A clock's <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> event occurs when its <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> becomes invalid, such as when the clock starts or stops.</span></span> <span data-ttu-id="b7782-104">このイベントには、<xref:System.Windows.Media.Animation.Clock> を使用して直接登録することも、<xref:System.Windows.Media.Animation.Timeline> を使用して登録することもできます。</span><span class="sxs-lookup"><span data-stu-id="b7782-104">You can register for this event with directly using a <xref:System.Windows.Media.Animation.Clock>, or you can register using a <xref:System.Windows.Media.Animation.Timeline>.</span></span>  
+  
+ <span data-ttu-id="b7782-105">次の例では、2 つの四角形の幅をアニメーション化するために、<xref:System.Windows.Media.Animation.Storyboard> を 1 つと <xref:System.Windows.Media.Animation.DoubleAnimation> オブジェクトを 2 つ使用しています。</span><span class="sxs-lookup"><span data-stu-id="b7782-105">In the following example, a <xref:System.Windows.Media.Animation.Storyboard> and two <xref:System.Windows.Media.Animation.DoubleAnimation> objects are used to animate the width of two rectangles.</span></span> <span data-ttu-id="b7782-106"><xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> イベントは、クロックの状態の変化をリッスンするために使用しています。</span><span class="sxs-lookup"><span data-stu-id="b7782-106">The <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> event is used to listen for clock state changes.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="b7782-107">例</span><span class="sxs-lookup"><span data-stu-id="b7782-107">Example</span></span>  
+ [!code-xaml[timingbehaviors_snip#_graphicsmm_StateExampleMarkupWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StateExample.xaml#_graphicsmm_stateexamplemarkupwholepage)]  
+  
+ [!code-csharp[timingbehaviors_snip#_graphicsmm_StateEventHandlers](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StateExample.xaml.cs#_graphicsmm_stateeventhandlers)]
+ [!code-vb[timingbehaviors_snip#_graphicsmm_StateEventHandlers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_snip/visualbasic/stateexample.xaml.vb#_graphicsmm_stateeventhandlers)]  
+  
+ <span data-ttu-id="b7782-108">次の図では、親タイムライン ("*ストーリーボード*") の進捗に伴い、アニメーションが入るさまざまな状態を示しています。</span><span class="sxs-lookup"><span data-stu-id="b7782-108">The following illustration shows the different states the animations enter as the parent timeline (*Storyboard*) progresses.</span></span>  
+  
+ <span data-ttu-id="b7782-109">![クロックは 2 つのアニメーションを含むストーリーボードを示します](./media/graphicsmm-3timelines.png "graphicsmm_3timelines")</span><span class="sxs-lookup"><span data-stu-id="b7782-109">![Clock states for a Storyboard with two animations](./media/graphicsmm-3timelines.png "graphicsmm_3timelines")</span></span>  
+  
+ <span data-ttu-id="b7782-110">次の表は、*Animation1* の <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> イベントが発生する時刻を示しています。</span><span class="sxs-lookup"><span data-stu-id="b7782-110">The following table shows the times at which *Animation1*'s <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> event fires:</span></span>  
+  
+||||||||  
+|-|-|-|-|-|-|-|  
+|<span data-ttu-id="b7782-111">時間 (秒)</span><span class="sxs-lookup"><span data-stu-id="b7782-111">Time (Seconds)</span></span>|<span data-ttu-id="b7782-112">1</span><span class="sxs-lookup"><span data-stu-id="b7782-112">1</span></span>|<span data-ttu-id="b7782-113">10</span><span class="sxs-lookup"><span data-stu-id="b7782-113">10</span></span>|<span data-ttu-id="b7782-114">19</span><span class="sxs-lookup"><span data-stu-id="b7782-114">19</span></span>|<span data-ttu-id="b7782-115">21</span><span class="sxs-lookup"><span data-stu-id="b7782-115">21</span></span>|<span data-ttu-id="b7782-116">30</span><span class="sxs-lookup"><span data-stu-id="b7782-116">30</span></span>|<span data-ttu-id="b7782-117">39</span><span class="sxs-lookup"><span data-stu-id="b7782-117">39</span></span>|  
+|<span data-ttu-id="b7782-118">状態</span><span class="sxs-lookup"><span data-stu-id="b7782-118">State</span></span>|<span data-ttu-id="b7782-119">アクティブ</span><span class="sxs-lookup"><span data-stu-id="b7782-119">Active</span></span>|<span data-ttu-id="b7782-120">アクティブ</span><span class="sxs-lookup"><span data-stu-id="b7782-120">Active</span></span>|<span data-ttu-id="b7782-121">Stopped</span><span class="sxs-lookup"><span data-stu-id="b7782-121">Stopped</span></span>|<span data-ttu-id="b7782-122">アクティブ</span><span class="sxs-lookup"><span data-stu-id="b7782-122">Active</span></span>|<span data-ttu-id="b7782-123">アクティブ</span><span class="sxs-lookup"><span data-stu-id="b7782-123">Active</span></span>|<span data-ttu-id="b7782-124">Stopped</span><span class="sxs-lookup"><span data-stu-id="b7782-124">Stopped</span></span>|  
+  
+ <span data-ttu-id="b7782-125">次の表は、*Animation2* の <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> イベントが発生する時刻を示しています。</span><span class="sxs-lookup"><span data-stu-id="b7782-125">The following table shows the times at which *Animation2*'s <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> event fires:</span></span>  
+  
+||||||||||  
+|-|-|-|-|-|-|-|-|-|  
+|<span data-ttu-id="b7782-126">時間 (秒)</span><span class="sxs-lookup"><span data-stu-id="b7782-126">Time (Seconds)</span></span>|<span data-ttu-id="b7782-127">1</span><span class="sxs-lookup"><span data-stu-id="b7782-127">1</span></span>|<span data-ttu-id="b7782-128">9</span><span class="sxs-lookup"><span data-stu-id="b7782-128">9</span></span>|<span data-ttu-id="b7782-129">11</span><span class="sxs-lookup"><span data-stu-id="b7782-129">11</span></span>|<span data-ttu-id="b7782-130">19</span><span class="sxs-lookup"><span data-stu-id="b7782-130">19</span></span>|<span data-ttu-id="b7782-131">21</span><span class="sxs-lookup"><span data-stu-id="b7782-131">21</span></span>|<span data-ttu-id="b7782-132">29</span><span class="sxs-lookup"><span data-stu-id="b7782-132">29</span></span>|<span data-ttu-id="b7782-133">31</span><span class="sxs-lookup"><span data-stu-id="b7782-133">31</span></span>|<span data-ttu-id="b7782-134">39</span><span class="sxs-lookup"><span data-stu-id="b7782-134">39</span></span>|  
+|<span data-ttu-id="b7782-135">状態</span><span class="sxs-lookup"><span data-stu-id="b7782-135">State</span></span>|<span data-ttu-id="b7782-136">アクティブ</span><span class="sxs-lookup"><span data-stu-id="b7782-136">Active</span></span>|<span data-ttu-id="b7782-137">フィル</span><span class="sxs-lookup"><span data-stu-id="b7782-137">Filling</span></span>|<span data-ttu-id="b7782-138">アクティブ</span><span class="sxs-lookup"><span data-stu-id="b7782-138">Active</span></span>|<span data-ttu-id="b7782-139">Stopped</span><span class="sxs-lookup"><span data-stu-id="b7782-139">Stopped</span></span>|<span data-ttu-id="b7782-140">アクティブ</span><span class="sxs-lookup"><span data-stu-id="b7782-140">Active</span></span>|<span data-ttu-id="b7782-141">フィル</span><span class="sxs-lookup"><span data-stu-id="b7782-141">Filling</span></span>|<span data-ttu-id="b7782-142">アクティブ</span><span class="sxs-lookup"><span data-stu-id="b7782-142">Active</span></span>|<span data-ttu-id="b7782-143">Stopped</span><span class="sxs-lookup"><span data-stu-id="b7782-143">Stopped</span></span>|  
+  
+ <span data-ttu-id="b7782-144">*Animation1* の状態が <xref:System.Windows.Media.Animation.ClockState.Active> のままであっても、<xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> イベントは 10 秒のときに発生することに着目してください。</span><span class="sxs-lookup"><span data-stu-id="b7782-144">Notice that *Animation1*'s  <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> event fires at 10 seconds, even though its state remains <xref:System.Windows.Media.Animation.ClockState.Active>.</span></span> <span data-ttu-id="b7782-145">これは、それの状態が 10 秒のときに変更されたけれども、同じティック内で <xref:System.Windows.Media.Animation.ClockState.Active> から <xref:System.Windows.Media.Animation.ClockState.Filling> に変更され、その後 <xref:System.Windows.Media.Animation.ClockState.Active> に戻っているためです。</span><span class="sxs-lookup"><span data-stu-id="b7782-145">That's because its state changed at 10 seconds, but it changed from <xref:System.Windows.Media.Animation.ClockState.Active> to <xref:System.Windows.Media.Animation.ClockState.Filling> and then back to <xref:System.Windows.Media.Animation.ClockState.Active> in the same tick.</span></span>

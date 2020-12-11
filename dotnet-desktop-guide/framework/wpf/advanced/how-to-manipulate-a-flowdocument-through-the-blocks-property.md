@@ -1,0 +1,55 @@
+---
+title: '方法: Blocks プロパティを介して FlowDocument を操作する'
+ms.date: 03/30/2017
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- 'documents [WPF], manipulating FlowDocuments through Blocks property [WPF], , '
+- ', '
+ms.assetid: cbb7291e-3f1b-433e-9e16-f4d93ced14e8
+ms.openlocfilehash: c307d85bf24e2d8a20226856181e0758758d40c0
+ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96980005"
+---
+# <a name="how-to-manipulate-a-flowdocument-through-the-blocks-property"></a><span data-ttu-id="483a3-102">方法: Blocks プロパティを介して FlowDocument を操作する</span><span class="sxs-lookup"><span data-stu-id="483a3-102">How to: Manipulate a FlowDocument through the Blocks Property</span></span>
+<span data-ttu-id="483a3-103">この例では、<xref:System.Windows.Documents.FlowDocument.Blocks%2A> プロパティを介して <xref:System.Windows.Documents.FlowDocument> に対して実行できる一般的な操作をいくつか示します。</span><span class="sxs-lookup"><span data-stu-id="483a3-103">These examples demonstrate some of the more common operations that can be performed on a <xref:System.Windows.Documents.FlowDocument> through the <xref:System.Windows.Documents.FlowDocument.Blocks%2A> property.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="483a3-104">例</span><span class="sxs-lookup"><span data-stu-id="483a3-104">Example</span></span>  
+ <span data-ttu-id="483a3-105">次の例では、新しい <xref:System.Windows.Documents.FlowDocument> が作成され、新しい <xref:System.Windows.Documents.Paragraph> 要素が <xref:System.Windows.Documents.FlowDocument> に追加されます。</span><span class="sxs-lookup"><span data-stu-id="483a3-105">The following example creates a new <xref:System.Windows.Documents.FlowDocument> and then appends a new <xref:System.Windows.Documents.Paragraph> element to the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentBlocksAdd](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentblocksadd)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentBlocksAdd](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentblocksadd)]  
+  
+## <a name="example"></a><span data-ttu-id="483a3-106">例</span><span class="sxs-lookup"><span data-stu-id="483a3-106">Example</span></span>  
+ <span data-ttu-id="483a3-107">次の例では、新しい <xref:System.Windows.Documents.Paragraph> 要素を作成し、それを <xref:System.Windows.Documents.FlowDocument> の先頭に挿入します。</span><span class="sxs-lookup"><span data-stu-id="483a3-107">The following example creates a new <xref:System.Windows.Documents.Paragraph> element and inserts it at the beginning of the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentBlocksInsert](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentblocksinsert)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentBlocksInsert](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentblocksinsert)]  
+  
+## <a name="example"></a><span data-ttu-id="483a3-108">例</span><span class="sxs-lookup"><span data-stu-id="483a3-108">Example</span></span>  
+ <span data-ttu-id="483a3-109">次の例では、<xref:System.Windows.Documents.FlowDocument> に含まれる最上位レベルの <xref:System.Windows.Documents.Block> 要素の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="483a3-109">The following example gets the number of top-level <xref:System.Windows.Documents.Block> elements contained in the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentBlocksCount](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentblockscount)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentBlocksCount](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentblockscount)]  
+  
+## <a name="example"></a><span data-ttu-id="483a3-110">例</span><span class="sxs-lookup"><span data-stu-id="483a3-110">Example</span></span>  
+ <span data-ttu-id="483a3-111">次の例では、<xref:System.Windows.Documents.FlowDocument> 内の最後の <xref:System.Windows.Documents.Block> 要素を削除します。</span><span class="sxs-lookup"><span data-stu-id="483a3-111">The following example deletes the last <xref:System.Windows.Documents.Block> element in the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentBlocksRemoveLast](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentblocksremovelast)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentBlocksRemoveLast](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentblocksremovelast)]  
+  
+## <a name="example"></a><span data-ttu-id="483a3-112">例</span><span class="sxs-lookup"><span data-stu-id="483a3-112">Example</span></span>  
+ <span data-ttu-id="483a3-113">次の例では、<xref:System.Windows.Documents.FlowDocument> からすべてのコンテンツ (<xref:System.Windows.Documents.Block> 要素) をクリアします。</span><span class="sxs-lookup"><span data-stu-id="483a3-113">The following example clears all of the contents (<xref:System.Windows.Documents.Block> elements) from the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentBlocksClear](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentblocksclear)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentBlocksClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentblocksclear)]  
+  
+## <a name="see-also"></a><span data-ttu-id="483a3-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="483a3-114">See also</span></span>
+
+- [<span data-ttu-id="483a3-115">RowGroups プロパティを介してテーブルの行グループを操作する</span><span class="sxs-lookup"><span data-stu-id="483a3-115">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [<span data-ttu-id="483a3-116">Columns プロパティによってテーブルの列を操作する</span><span class="sxs-lookup"><span data-stu-id="483a3-116">Manipulate a Table's Columns through the Columns Property</span></span>](how-to-manipulate-table-columns-through-the-columns-property.md)
+- [<span data-ttu-id="483a3-117">RowGroups プロパティを介してテーブルの行グループを操作する</span><span class="sxs-lookup"><span data-stu-id="483a3-117">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
