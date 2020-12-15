@@ -1,0 +1,85 @@
+### YamlMime:Landing
+title: Windows フォームのドキュメント
+summary: .NET 5 上の、Windows 用のオープンソースのグラフィカル ユーザー インターフェイスである、Windows フォームの使用について学習します。
+metadata:
+  title: Windows フォーム for .NET 5 のドキュメント
+  description: .NET 5 上の、Windows 用のオープンソースのグラフィカル ユーザー インターフェイスである、Windows フォームの使用について学習します。
+  ms.topic: landing-page
+  ms.date: 10/26/2020
+  ms.openlocfilehash: 1b8bc1cfa7655a33819c77ba4d5af75f7c838e74
+  ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 12/09/2020
+  ms.locfileid: "96992865"
+landingContent:
+- title: Windows フォームに関する詳細
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: 新機能
+      url: whats-new/index.md
+  - linkListType: overview
+    links:
+    - text: Windows フォームの概要
+      url: overview/index.md
+  - linkListType: tutorial
+    links:
+    - text: 新しいアプリを作成する
+      url: get-started/create-app-visual-studio.md
+    - text: .NET Framework からの移行
+      url: migration/index.md
+  - linkListType: download
+    links:
+    - text: Visual Studio 2019 バージョン 16.8
+      url: https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+desktopguide+winforms
+- title: コントロール
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: コントロールについて
+      url: controls/overview.md
+  - linkListType: concept
+    links:
+    - text: Layout
+      url: controls/layout.md
+  - linkListType: how-to-guide
+    links:
+    - text: コントロールの追加
+      url: controls/how-to-add-to-a-form.md
+    - text: アクセス (ショートカット) キーを追加する
+      url: controls/how-to-create-access-keys.md
+- title: キーボード入力
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: キーボードについて
+      url: input-keyboard/overview.md
+  - linkListType: concept
+    links:
+    - text: キーボード イベント
+      url: input-keyboard/events.md
+  - linkListType: how-to-guide
+    links:
+    - text: キーボード入力を処理する
+      url: input-keyboard/how-to-handle-forms.md
+    - text: キー イベントを変更する
+      url: input-keyboard/how-to-change-key-press.md
+- title: マウス入力
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: マウスについて
+      url: input-mouse/overview.md
+  - linkListType: concept
+    links:
+    - text: マウス イベント
+      url: input-mouse/events.md
+    - text: ドラッグ アンド ドロップ
+      url: input-mouse/drag-and-drop.md
+  - linkListType: how-to-guide
+    links:
+    - text: カーソルを管理する
+      url: input-mouse/how-to-manage-cursor-pointer.md
+    - text: マウス イベントをシミュレートする
+      url: input-mouse/how-to-simulate-events.md

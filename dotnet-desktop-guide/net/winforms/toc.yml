@@ -1,0 +1,87 @@
+items:
+  - name: Windows フォーム for .NET
+    href: index.yml
+  - name: 新機能
+    href: whats-new/index.md
+  - name: はじめに
+    items:
+      - name: 概要
+        href: overview/index.md
+      - name: アプリを作成する
+        href: get-started/create-app-visual-studio.md
+  - name: 移行
+    items:
+      - name: .NET 5 に移行する
+        href: migration/index.md
+  - name: フォーム
+    items:
+      - name: イベント ハンドラー
+        href: forms/events.md
+      - name: 自動スケーリング
+        href: forms/autoscale.md
+      - name: 一般的なタスク
+        items:
+          - name: フォームを追加する
+            href: forms/how-to-add.md
+          - name: フォームのサイズを変更する
+            href: forms/how-to-position-and-resize.md
+          - name: フォームを配置する
+            href: forms/how-to-position-and-resize.md#position-with-the-designer
+  - name: コントロール
+    items:
+      - name: 概要
+        href: controls/overview.md
+      - name: レイアウト オプション
+        href: controls/layout.md
+      - name: ラベル
+        href: controls/labels.md
+      - name: カスタム コントロール
+        href: controls/custom.md
+      - name: カスタム描画
+        href: controls/custom-painting-drawing.md
+      - name: アクセシビリティ情報を適用する
+        href: controls/provide-accessibility-information.md
+      - name: 一般的なタスク
+        items:
+          - name: フォームにコントロールを追加する
+            href: controls/how-to-add-to-a-form.md
+          - name: アクセス キーのショートカットを作成する
+            href: controls/how-to-create-access-keys.md
+          - name: コントロールによって表示されるテキストを設定する
+            href: controls/how-to-set-the-display-text.md
+          - name: コントロールによって表示されるイメージを設定する
+            href: controls/how-to-add-a-picture-to-a-control.md
+  - name: ユーザー入力 - キーボード
+    items:
+      - name: 概要
+        href: input-keyboard/overview.md
+      - name: キーボード イベントを使用する
+        href: input-keyboard/events.md
+      - name: 入力を検証する
+        href: input-keyboard/validation.md
+      - name: 一般的なタスク
+        items:
+          - name: 押されたキーを変更する
+            href: input-keyboard/how-to-change-key-press.md
+          - name: どの修飾キーが押されたかを判断する
+            href: input-keyboard/how-to-check-modifier-key.md
+          - name: 入力をフォーム レベルで処理する
+            href: input-keyboard/how-to-handle-forms.md
+          - name: キーボード イベントをシミュレートする
+            href: input-keyboard/how-to-simulate-events.md
+  - name: ユーザー入力 - マウス
+    items:
+      - name: 概要
+        href: input-mouse/overview.md
+      - name: マウス イベントを使用する
+        href: input-mouse/events.md
+      - name: ドラッグ アンド ドロップ機能
+        href: input-mouse/drag-and-drop.md
+      - name: 一般的なタスク
+        items:
+          - name: クリックとダブルクリックを識別する
+            href: input-mouse/how-to-distinguish-between-clicks-and-double-clicks.md
+          - name: マウス ポインターをコントロールおよび変更する
+            href: input-mouse/how-to-manage-cursor-pointer.md
+          - name: マウス イベントをシミュレートする
+            href: input-mouse/how-to-simulate-events.md
