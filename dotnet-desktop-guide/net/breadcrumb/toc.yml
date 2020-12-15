@@ -1,0 +1,31 @@
+items:
+  - name: Docs
+    tocHref: /
+    topicHref: /
+    items:
+      - name: .NET
+        tocHref: /dotnet/
+        topicHref: /dotnet/index
+        items:
+          - name: デスクトップ ガイド
+            tocHref: /dotnet/desktop
+            topicHref: /dotnet/desktop/index
+            items:
+              - name: .NET 5 (および .NET Core 3.1)
+                items:
+                  - name: Windows フォーム
+                    tocHref: /dotnet/desktop/winforms/
+                    topicHref: /dotnet/desktop/winforms/index
+                  - name: Windows Presentation Foundation
+                    tocHref: /dotnet/desktop/wpf/
+                    topicHref: /dotnet/desktop/wpf/index
+                    items:
+                      - name: 作業開始
+                        tocHref: /visualstudio/get-started/csharp/tutorial-wpf
+                        topicHref: /dotnet/desktop/wpf/getting-started/index
+                      - name: 移行
+                        tocHref: /dotnet/desktop/wpf/migration
+                        topicHref: /dotnet/desktop/wpf/migration/index
+                      - name: データ バインディング
+                        tocHref: /dotnet/desktop/wpf/data
+                        topicHref: /dotnet/desktop/wpf/data/index
