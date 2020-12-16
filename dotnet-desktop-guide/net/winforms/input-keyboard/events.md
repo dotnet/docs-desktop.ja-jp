@@ -1,0 +1,53 @@
+---
+title: キーボード イベントの使用
+description: キーボード イベントを使用したキーボード入力の処理方法の概要。 この記事では、キーボード関連のイベントの一覧と、それらを使用するタイミングについて説明します。
+ms.date: 10/26/2020
+ms.topic: overview
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- KeyPress event [Windows Forms]
+- keyboards [Windows Forms], keyboard events
+- KeyUp event
+- KeyDown event
+- keyboard events
+- events [Windows Forms], keyboard
+ms.openlocfilehash: 3e7493c9841fa036aa9d18aa00a1322d9758cbb1
+ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96942379"
+---
+# <a name="using-keyboard-events-windows-forms-net"></a>キーボード イベントの使用 (Windows フォーム .NET)
+
+多くの Windows フォーム プログラムは、キーボード イベントを処理することによってキーボード入力を処理します。 この記事では、どのような場合に各キーボード イベントを使用するか、また各イベントがどのようなデータを提供するかについての詳細を含め、キーボード イベントの概要について説明します。 一般的なイベントの詳細については、「[イベントの概要 (Windows フォーム .NET)](../forms/events.md)」を参照してください。
+
+[!INCLUDE [desktop guide under construction](../../includes/desktop-guide-preview-note.md)]
+
+## <a name="keyboard-events"></a>キーボード イベント
+
+Windows フォームは、ユーザーがキーボードのキーを押したときに発生する 2 つのイベントと、キーボードのキーを離したときに発生する 1 つのイベントを提供します。これらのイベントは次のとおりです。
+
+- <xref:System.Windows.Forms.Control.KeyDown> イベント。キーを押したときに 1 回発生します。
+- <xref:System.Windows.Forms.Control.KeyPress> イベント。ユーザーが同じキーを押したままにすると、繰り返し発生する可能性があります。
+- <xref:System.Windows.Forms.Control.KeyUp> イベント。ユーザーがキーを離したときに 1 回発生します。
+
+ユーザーがキーを押すと、Windows フォームは、キーボード メッセージが文字キーまたは物理キーのどちらを示しているかに基づいて、発生させるイベントを決定します。 文字と物理のキーの詳細については、[キーボードの概要の「キーボード イベント」](overview.md#keyboard-events)を参照してください。
+
+上の 3 つのキーボード イベントに関する説明を次の表に示します。
+
+|キーボード イベント|説明|結果|
+|--------------------|-----------------|-------------|
+|<xref:System.Windows.Forms.Control.KeyDown>|このイベントは、ユーザーが物理キーを押すと発生します。|<xref:System.Windows.Forms.Control.KeyDown> のハンドラーは、次の項目を受け取ります。<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs> パラメーター。このパラメーターは、物理キーボード ボタンを示す <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> プロパティを提供します。</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> プロパティ (Shift、Ctrl、または Alt キー)。</li><li><xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> プロパティ (キー コードと修飾子を組み合わせます)。 また、<xref:System.Windows.Forms.KeyEventArgs> パラメーターは、次のプロパティを提供します。<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs.Handled%2A> プロパティ。基となるコントロールがキーを受け取らないように設定できます。</li><li><xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> プロパティ。これを使用すると、特定のキーストロークで <xref:System.Windows.Forms.Control.KeyPress> イベントと <xref:System.Windows.Forms.Control.KeyUp> イベントが発生しないようにすることができます。</li></ul></li></ul>|
+|<xref:System.Windows.Forms.Control.KeyPress>|このイベントは、1 つまたは複数のキーを押すことにより文字が出力された場合に発生します。 たとえば、Shift キーを押しながら小文字の "a" キーを押すと、大文字の "A" が出力されます。|<xref:System.Windows.Forms.Control.KeyPress> は、<xref:System.Windows.Forms.Control.KeyDown> の後に発生します。<br /><br /> <ul><li><xref:System.Windows.Forms.Control.KeyPress> のハンドラーは、次の項目を受け取ります。</li><li><xref:System.Windows.Forms.KeyPressEventArgs> パラメーター。このパラメーターには、押したキーの文字コードが入ります。 この文字コードは、文字キーと修飾子キーの組み合わせごとに一意です。<br /><br />     たとえば、"A" キーは次の文字コードを生成します。<br /><br /> <ul><li>文字コード 65 (Shift キーまたは Caps Lock キーと一緒に押した場合)</li><li>97 (単独で押した場合)</li><li>1 (Ctrl キーと一緒に押した場合)</li></ul></li></ul>|
+|<xref:System.Windows.Forms.Control.KeyUp>|このイベントは、ユーザーが物理キーを離すと発生します。|<xref:System.Windows.Forms.Control.KeyUp> のハンドラーは、次の項目を受け取ります。<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs> パラメーターの値。次のプロパティを提供します。<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> プロパティ (物理キーボード ボタンを示します)。</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> プロパティ (Shift、Ctrl、または Alt キー)。</li><li><xref:System.Globalization.SortKey.KeyData%2A> プロパティ (キー コードと修飾子を組み合わせます)。</li></ul></li></ul>|
+
+## <a name="see-also"></a>関連項目
+
+- [キーボードの使用の概要 (Windows フォーム .NET)](overview.md)
+- [キーボード キー イベントを変更する方法 (Windows フォーム .NET)](how-to-change-key-press.md)
+- [修飾キーの押下を確認する方法 (Windows フォーム .NET)](how-to-check-modifier-key.md)
+- [キーボード イベントをシミュレートする方法 (Windows フォーム .NET)](how-to-simulate-events.md)
+- [フォームでキーボード入力メッセージを処理する方法 (Windows フォーム .NET)](how-to-handle-forms.md)
