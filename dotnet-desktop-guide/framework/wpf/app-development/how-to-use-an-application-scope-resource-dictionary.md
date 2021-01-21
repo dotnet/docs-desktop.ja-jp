@@ -10,12 +10,12 @@ helpviewer_keywords:
 - resource dictionaries [WPF], application-scope
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
-ms.openlocfilehash: 7423cf03e5ebb94eb9ad5f3a0ee0bd5e524cccba
-ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.openlocfilehash: 0d9c4f851c5ee03bf60dbdadc31d9fc4c6536746
+ms.sourcegitcommit: 302273bd74509dfbff11126753dd210d80f1bc37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96975081"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98535991"
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>方法: アプリケーション スコープのリソース ディクショナリを使用する
 
@@ -43,7 +43,9 @@ ms.locfileid: "96975081"
  [!code-vb[HOWTOResourceDictionaries#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HowToResourceDictionaries/VB/MainWindow.xaml.vb#3)]  
   
  <xref:System.Windows.Application.Resources%2A> を使用するときに注意する点が 2 つあります。 1 つ目は、ディクショナリの "*キー*" はオブジェクトであるため、プロパティ値を設定および取得するときに、まったく同じオブジェクト インスタンスを使用する必要があります。 (キーに文字列を使用する場合、大文字と小文字が区別されることに注意してください)。2 つ目は、ディクショナリの "*値*" はオブジェクトであるため、プロパティ値を取得するときに、その値を目的の型に変換する必要があります。  
-  
+
+リソースの種類によっては、型や型などの明示的なキーとして、型によって定義されたプロパティが自動的に使用される場合があり <xref:System.Windows.Style> <xref:System.Windows.DataTemplate> ます。 これにより、値が上書きされる可能性があり `x:Key` ます。 キーが尊重されることを保証するには `x:Key` 、明示的なキープロパティの前に宣言します。 詳細については、「 [スタイル」、「DataTemplates](../advanced/xaml-resources-define.md#styles-datatemplates-and-implicit-keys)」、および「暗黙のキー」を参照してください。
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.ResourceDictionary>

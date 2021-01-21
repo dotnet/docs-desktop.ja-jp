@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: 1f6a96e8a05fff40eb08da0ce318faa86a06cc3a
-ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.openlocfilehash: 20c34bdec1b55a74f7ec005b3948ac123585155d
+ms.sourcegitcommit: 302273bd74509dfbff11126753dd210d80f1bc37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96981275"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536001"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>方法: JPEG 圧縮レベルの設定
 イメージをディスクに保存するときに、ファイル サイズを最小化したり品質を向上させるために、イメージのパラメーターを修正したりする必要がある場合があります。 圧縮レベルを修正して、JPEG イメージの品質を調整することができます。 JPEG イメージを保存するときに圧縮レベルを指定するには、オブジェクトを作成 <xref:System.Drawing.Imaging.EncoderParameters> し、そのオブジェクトをクラスのメソッドに渡す必要があり <xref:System.Drawing.Image.Save%2A> <xref:System.Drawing.Image> ます。 オブジェクトを初期化して、 <xref:System.Drawing.Imaging.EncoderParameters> 1 つの配列が含まれるようにし <xref:System.Drawing.Imaging.EncoderParameter> ます。 を作成するときに <xref:System.Drawing.Imaging.EncoderParameter> 、 <xref:System.Drawing.Imaging.Encoder.Quality> エンコーダーと必要な圧縮レベルを指定します。  
@@ -94,7 +94,7 @@ End Sub
 ```csharp  
 private ImageCodecInfo GetEncoder(ImageFormat format)  
 {  
-    ImageCodecInfo[] codecs = ImageCodecInfo.GetImageDecoders();  
+    ImageCodecInfo[] codecs = ImageCodecInfo.GetImageEncoders();  
     foreach (ImageCodecInfo codec in codecs)  
     {  
         if (codec.FormatID == format.Guid)  
@@ -109,7 +109,7 @@ private ImageCodecInfo GetEncoder(ImageFormat format)
 ```vb  
 Private Function GetEncoder(ByVal format As ImageFormat) As ImageCodecInfo  
   
-    Dim codecs As ImageCodecInfo() = ImageCodecInfo.GetImageDecoders()  
+    Dim codecs As ImageCodecInfo() = ImageCodecInfo.GetImageEncoders()  
     Dim codec As ImageCodecInfo  
     For Each codec In codecs  
         If codec.FormatID = format.Guid Then  
