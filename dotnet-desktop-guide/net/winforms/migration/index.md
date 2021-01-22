@@ -3,12 +3,12 @@ title: Windows フォーム アプリを .NET 5 に移行する
 description: .NET Framework Windows フォーム アプリケーションを .NET 5 に移植する方法について学習します。
 ms.date: 11/02/2020
 ms.topic: how-to
-ms.openlocfilehash: 105c209fc567d2cce70b01267f793152d8140cb8
-ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.openlocfilehash: 84d12aeb376091aca2f10a750aff6f2fb3471d6f
+ms.sourcegitcommit: cf26656c126a55cfbfc06e2a89fe01c2b8df2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96992860"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97697420"
 ---
 # <a name="how-to-migrate-a-windows-forms-desktop-app-to-net-5"></a>Windows フォーム デスクトップ アプリを .NET 5 に移行する方法
 
@@ -159,11 +159,13 @@ ms.locfileid: "96992860"
 
 ### <a name="resources-and-settings"></a>リソースと設定
 
-.NET Framework 用の Windows フォーム プロジェクトには通常、*Properties/Settings.settings* や *Properties/Resources.resx* などの他のファイルが含まれています。 これらのファイルと、*resx* 形式のファイル以外のアプリ用に作成されたすべての *resx* ファイルは、移行する必要があります。
+.NET Framework プロジェクトと .NET 5 で使用される SDK スタイルのプロジェクトの違いで 1 つ注意する点は、.NET Framework プロジェクトではコード ファイルにオプトイン モデルが使用されるということです。 コンパイルするコード ファイルはすべて、自分のプロジェクト ファイルで明示的に定義される必要があります。 SDK スタイルのプロジェクトは逆になり、既定でオプトアウト動作に設定されます。プロジェクトのディレクトリ以下から始まるコード ファイルはすべて、自分のプロジェクトに自動的に含まれます。 これらのエントリがシンプルで設定されていない場合は、これらを移行する必要はありません。 これは、_resx_ などのその他の一般的なファイルと同じです。
+
+Windows フォーム プロジェクトには、_Properties/Settings.settings_ や _Properties/Resources.resx_ などの特定のファイルも含まれています。 これらのファイルは、元のプロジェクトで宣言されているため、移行する必要がある場合があります。
 
 これらのエントリを古いプロジェクト ファイルから、新しいプロジェクトの `<ItemGroup>` 要素にコピーします。 エントリをコピーした後、`<Compile Include="value">` または `<EmbeddedResource Include="value">` 要素は、`Include` ではなく代わりに `Update` を使用するように変更します。
 
-- *Settings.settings* ファイルの構成をインポートします。 `Include` が `<Compile>` 要素で `Update` に変更されたことに注目してください。
+- _Settings.settings_ ファイルの構成をインポートします。 コード ファイルが既に含まれているため、`<Compile>` エントリの `Update` 属性が `Include` から `Update` に変更されていることに注目してください。
 
   ```xml
   <ItemGroup>
@@ -179,14 +181,16 @@ ms.locfileid: "96992860"
   </ItemGroup>
   ```
 
+  _Properties\Settings.settings_ エントリが `Include` のままになっていることがわかります。 プロジェクトに _settings_ ファイルが自動的に含まれることはありません。
+
   > [!IMPORTANT]
-  > **Visual Basic** プロジェクトの場合、通常は *My Project* フォルダーが使用されますが、C# プロジェクトの場合は通常、既定のプロジェクト設定ファイルには *Properties* フォルダーが使用されます。
+  > **Visual Basic** プロジェクトの場合、通常は _My Project_ フォルダーが使用されますが、C# プロジェクトの場合は通常、既定のプロジェクト設定ファイルには _Properties_ フォルダーが使用されます。
   
-- *properties/Resources.resx* ファイルなど、*resx* ファイルの構成をインポートします。 `Include` が `<Compile>` と `<EmbeddedResource>` の両方の要素で `Update` に変更され、`<SubType>` が `<EmbeddedResource>` から削除されたことに注目してください。
+- _properties/Resources.resx_ ファイルなど、_resx_ ファイルの構成をインポートします。 `Include` が `<Compile>` と `<EmbeddedResource>` の両方の要素で `Update` に変更され、`<SubType>` が `<EmbeddedResource>` から削除されたことに注目してください。
 
   ```xml
   <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
+    <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
@@ -199,17 +203,17 @@ ms.locfileid: "96992860"
   ```
 
   > [!IMPORTANT]
-  > **Visual Basic** プロジェクトの場合、通常は *My Project* フォルダーが使用されますが、C# プロジェクトの場合は通常、既定のプロジェクト リソース ファイルには *Properties* フォルダーが使用されます。
+  > **Visual Basic** プロジェクトの場合、通常は _My Project_ フォルダーが使用されますが、C# プロジェクトの場合は通常、既定のプロジェクト リソース ファイルには _Properties_ フォルダーが使用されます。
 
 ### <a name="visual-basic"></a>Visual Basic
 
 Visual Basic 言語プロジェクトには追加の構成が必要です。
 
-01. 構成ファイルの *My Project\Application.myapp* 設定をインポートします。 `<None>` および `<Compile>` 要素で、`Include` 属性ではなく `Update` 属性が使用されていることに注目してください。
+01. 構成ファイルの _My Project\Application.myapp_ 設定をインポートします。 `<Compile>` 要素から、`Include` 属性ではなく `Update` 属性が使用されていることに注目してください。
 
     ```xml
     <ItemGroup>
-      <None Update="My Project\Application.myapp">
+      <None Include="My Project\Application.myapp">
         <Generator>MyApplicationCodeGenerator</Generator>
         <LastGenOutput>Application.Designer.vb</LastGenOutput>
       </None>
@@ -288,7 +292,7 @@ Visual Basic 言語プロジェクトには追加の構成が必要です。
 
 ## <a name="edit-appconfig"></a>App.config を編集する
 
-アプリに *App.config* ファイルがある場合は、`<supportedRuntime>` 要素を削除します。
+アプリに _App.config_ ファイルがある場合は、`<supportedRuntime>` 要素を削除します。
 
 ```xml
 <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
