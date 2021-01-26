@@ -8,12 +8,12 @@ ms.topic: overview
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 73a8307950d55d51fa67be97918c83cd9013ce70
-ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.openlocfilehash: d441ad76fa684f3a99b1d1404bd02640402693f0
+ms.sourcegitcommit: 7e271d44c89687f0a96a249a9f658a2e6c067957
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96942398"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98570461"
 ---
 # <a name="data-binding-overview-wpf-net"></a>データ バインドの概要 (WPF .NET)
 
@@ -94,7 +94,7 @@ WPF のデータ バインディング機能には、広範なプロパティに
 
 - <xref:System.Windows.Data.BindingMode.OneWay> バインディングによってソース プロパティが変更されたことにより、ターゲット プロパティは自動的に更新されますが、ターゲット プロパティへの変更は、ソース プロパティには反映されません。 この型のバインディングは、バインドされているコントロールが暗黙的な読み取り専用の場合に適しています。 たとえば、株価情報などのソースにバインドしたり、またはターゲット プロパティに、データ バインドされたテーブルの背景色などのように、変更用コントロール インターフェイスがない可能性もあります。 ターゲット プロパティの変更を監視する必要がない場合は、<xref:System.Windows.Data.BindingMode.OneWay> バインディング モードを使うことにより、<xref:System.Windows.Data.BindingMode.TwoWay> バインディング モードのオーバーヘッドを回避できます。
 
-- <xref:System.Windows.Data.BindingMode.TwoWay> バインディングにより、ソース プロパティまたはターゲット プロパティのいずれかが変更され、もう一方も自動的に更新されます。 この種類のバインドは、編集可能なフォームやその他の完全にインタラクティブな UI シナリオに適しています。 ほとんどのプロパティは <xref:System.Windows.Data.BindingMode.OneWay> バインディングに既定で設定されていますが、一部の依存関係プロパティ (一般的に、<xref:System.Windows.Controls.TextBox.Text?displayProperty=nameWithType> や [CheckBox.IsChecked](xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked) などのユーザーが編集可能なコントロールのプロパティ) は、規定で <xref:System.Windows.Data.BindingMode.TwoWay> バインディングに設定されています。 依存関係プロパティが既定で一方向と双方向のどちらでバインドされるかをプログラムで判断する 1 つの方法は、<xref:System.Windows.DependencyProperty.GetMetadata%2A?displayProperty=nameWithType> を使用してそのプロパティ メタデータを取得してから、<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A?displayProperty=nameWithType> プロパティのブール値を確認する方法です。
+- <xref:System.Windows.Data.BindingMode.TwoWay> バインディングにより、ソース プロパティまたはターゲット プロパティのいずれかが変更され、もう一方も自動的に更新されます。 この種類のバインドは、編集可能なフォームやその他の完全にインタラクティブな UI シナリオに適しています。 ほとんどのプロパティは既定で <xref:System.Windows.Data.BindingMode.OneWay> バインディングに設定されていますが、一部の依存関係プロパティ (一般的に、<xref:System.Windows.Controls.TextBox.Text?displayProperty=nameWithType> や [CheckBox.IsChecked](xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked) などのユーザーが編集可能なコントロールのプロパティ) は、規定で <xref:System.Windows.Data.BindingMode.TwoWay> バインディングに設定されています。 依存関係プロパティが既定で一方向と双方向のどちらでバインドされるかをプログラムで判断する 1 つの方法は、<xref:System.Windows.DependencyProperty.GetMetadata%2A?displayProperty=nameWithType> を使用してそのプロパティ メタデータを取得してから、<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A?displayProperty=nameWithType> プロパティのブール値を確認する方法です。
 
 - <xref:System.Windows.Data.BindingMode.OneWayToSource> は <xref:System.Windows.Data.BindingMode.OneWay> バインディングの逆です。ターゲット プロパティが変更されると、ソース プロパティが更新されます。 1 つのシナリオ例は、UI からのソース値のみを再評価する必要があるかどうかです。
 
