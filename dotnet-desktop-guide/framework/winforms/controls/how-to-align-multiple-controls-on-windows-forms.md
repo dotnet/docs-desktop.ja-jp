@@ -9,15 +9,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-author: jillre
-ms.author: jillfra
-manager: jillfra
-ms.openlocfilehash: 4bde1926b89fe553ec9eda29ca5dfc1f3373af52
-ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.openlocfilehash: f9faac1957720fc5561ff08524a6e95bf20a7bff
+ms.sourcegitcommit: 7f48b9ecf8a30db42c8ecea0dd4df577736631a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96981011"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957039"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>方法 : Windows フォーム上の複数のコントロールを配置する
 

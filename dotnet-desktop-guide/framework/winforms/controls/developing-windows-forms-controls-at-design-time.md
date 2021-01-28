@@ -9,15 +9,12 @@ helpviewer_keywords:
 - user controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
-author: jillre
-ms.author: jillfra
-manager: jillfra
-ms.openlocfilehash: 4e192983c5818ddb81ed4581d91ae61375bb808e
-ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.openlocfilehash: d5285bd4190e74a86e20d951d9ebb2256c21c544
+ms.sourcegitcommit: 7f48b9ecf8a30db42c8ecea0dd4df577736631a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96974170"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98956981"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>デザイン時に Windows フォームコントロールを開発する
 
@@ -89,7 +86,7 @@ Windows フォーム デザイナーで読み込みに失敗したときに Micr
 
 ## <a name="related-sections"></a>関連項目
 
-[.NET Framework を使用したカスタム Windows フォームコントロールの開発](developing-custom-windows-forms-controls.md)\
+[.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)\
 .NET Framework で独自のカスタム コントロールを作る方法について説明します。
 
 [言語への非依存性と Language-Independent コンポーネント](/dotnet/standard/language-independence-and-language-independent-components)\

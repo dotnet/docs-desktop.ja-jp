@@ -14,12 +14,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: 26cbc995a749c4c129729be700dee588d1033a05
-ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.openlocfilehash: c047f8de55ad7b66a6bc417db1a2678dc87b59c1
+ms.sourcegitcommit: 7f48b9ecf8a30db42c8ecea0dd4df577736631a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96982976"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957267"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>方法: DHTML コードとクライアント アプリケーション コード間の双方向の通信を実装する
 
@@ -44,19 +44,14 @@ ms.locfileid: "96982976"
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#3)]
 
-4. フォームのコンストラクターまたは <xref:System.Windows.Forms.Form.Load> イベント ハンドラーの <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> プロパティを設定します。
+4. <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A>フォームのコンストラクターでプロパティを設定するか、メソッドをオーバーライド <xref:System.Windows.Forms.Form.OnLoad%2A> します。
 
      次のコードは、スクリプト オブジェクトに、フォーム クラス自体を使用します。
-
-    > [!NOTE]
-    > コンポーネント オブジェクト モデル (COM) は、スクリプト オブジェクトにアクセスできる必要があります。 フォームが COM から参照できるようにするには<xref:System.Runtime.InteropServices.ComVisibleAttribute> 属性をフォーム クラスに追加します。
 
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#4)]
 
-5. スクリプト コードが使用するアプリケーション コードにパブリック プロパティまたはメソッドを実装します。
-
-     たとえば、スクリプト オブジェクトにフォーム クラスを使用する場合、次のコードをフォーム クラスに追加します。
+5. スクリプトオブジェクトを実装します。
 
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#5)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#5)]

@@ -16,15 +16,12 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-author: jillre
-ms.author: jillfra
-manager: jillfra
-ms.openlocfilehash: e7b26d1741046ea242bd58a9216b8958697e1879
-ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.openlocfilehash: be79dd4b105a956afdbfc6f9a4f3eb6cc278da4d
+ms.sourcegitcommit: 7f48b9ecf8a30db42c8ecea0dd4df577736631a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96974785"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957670"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>方法: Windows フォームにコントロールを配置する
 

@@ -7,15 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-author: jillre
-ms.author: jillfra
-manager: jillfra
-ms.openlocfilehash: 0b68a70b55cbf03d480fd388a637a4caf78b6eaa
-ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.openlocfilehash: b916fd83ed35e16864366ba899c9dc9ab4e0624d
+ms.sourcegitcommit: 7f48b9ecf8a30db42c8ecea0dd4df577736631a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96983416"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957228"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>チュートリアル: スナップ線を使用した Windows フォームでのコントロールの配置
 
@@ -25,7 +22,7 @@ ms.locfileid: "96983416"
 
 スナップ線を使用すると、コントロールの配置が簡単になり、プロフェッショナルな外観と動作 (ルックアンドフィール) がわかりやすくなります。
 
-## <a name="create-the-project"></a>プロジェクトを作成する
+## <a name="create-the-project"></a>プロジェクトの作成
 
 1. Visual Studio で、"SnaplineExample" という名前の Windows ベースのアプリケーションプロジェクトを作成します。
 

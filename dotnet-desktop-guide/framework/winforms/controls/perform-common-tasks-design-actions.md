@@ -4,15 +4,12 @@ ms.date: 02/13/2019
 helpviewer_keywords:
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-author: jillre
-ms.author: jillfra
-manager: jillfra
-ms.openlocfilehash: 342741b9ce032b1b8ec50a6c689d9109d12f5b3b
-ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.openlocfilehash: 81ed6b8914ee79fa4633dfe2cdcd708aca6effdc
+ms.sourcegitcommit: 7f48b9ecf8a30db42c8ecea0dd4df577736631a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96981980"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957254"
 ---
 # <a name="walkthrough-perform-common-tasks-using-designer-actions"></a>チュートリアル: デザイン アクションを使って一般的なタスクを実行する
 
@@ -26,7 +23,7 @@ Windows フォームアプリケーションのフォームとコントロール
 
 デザイナーのアクションは、デザイナーの有効期間にわたってコントロールインスタンスにアタッチされたままになり、常に使用できるようになります。
 
-## <a name="create-the-project"></a>プロジェクトを作成する
+## <a name="create-the-project"></a>プロジェクトの作成
 
 最初にプロジェクトを作成し、フォームを設定します。
 

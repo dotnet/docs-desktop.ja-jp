@@ -13,15 +13,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-author: jillre
-ms.author: jillfra
-manager: jillfra
-ms.openlocfilehash: 6269b09c56963fefd500b9e1e6c9d7f51f9619cf
-ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.openlocfilehash: 8f5532c434330848d34d2569f2fa81b01012448b
+ms.sourcegitcommit: 7f48b9ecf8a30db42c8ecea0dd4df577736631a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96982731"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957683"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>方法: Windows フォーム上のオブジェクトをレイヤー化する
 

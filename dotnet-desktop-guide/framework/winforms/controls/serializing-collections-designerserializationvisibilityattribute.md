@@ -11,15 +11,12 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-author: jillre
-ms.author: jillfra
-manager: jillfra
-ms.openlocfilehash: 06ef484ffed76bad124ca33d240a4054fd937c14
-ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.openlocfilehash: f4fb9c6e7c48a1c6671b14ba05a63dc61195105a
+ms.sourcegitcommit: 7f48b9ecf8a30db42c8ecea0dd4df577736631a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96974149"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957618"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>チュートリアル: 標準型のコレクションのシリアル化
 
@@ -48,7 +45,7 @@ ms.locfileid: "96974149"
     |プロパティ|変更後の値|
     |--------------|---------------|
     |**Multiline**|`true`|
-    |**ドッキング**|<xref:System.Windows.Forms.DockStyle.Fill>|
+    |**Dock**|<xref:System.Windows.Forms.DockStyle.Fill>|
     |**スクロールバー**|<xref:System.Windows.Forms.ScrollBars.Vertical>|
     |**ReadOnly**|`true`|
 

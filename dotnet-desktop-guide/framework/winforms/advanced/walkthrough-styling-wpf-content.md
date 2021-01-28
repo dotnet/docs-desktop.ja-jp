@@ -6,15 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-author: jillre
-ms.author: jillfra
-manager: jillfra
-ms.openlocfilehash: b7b23976caf7e6ac16e05b57cf904139fd89fd24
-ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.openlocfilehash: f7acec4edb31dba0aa014943dde7f758fe8e4575
+ms.sourcegitcommit: 7f48b9ecf8a30db42c8ecea0dd4df577736631a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96981611"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957397"
 ---
 # <a name="walkthrough-style-wpf-content"></a>チュートリアル: WPF コンテンツのスタイルを適用する
 
@@ -24,7 +21,7 @@ ms.locfileid: "96981611"
 
 このチュートリアルを完了するには Visual Studio が必要です。
 
-## <a name="create-the-project"></a>プロジェクトを作成する
+## <a name="create-the-project"></a>プロジェクトの作成
 
 Visual Studio を開き、Visual Basic またはという名前の Visual C# で新しい Windows フォームアプリケーションプロジェクトを作成し `StylingWpfContent` ます。
 

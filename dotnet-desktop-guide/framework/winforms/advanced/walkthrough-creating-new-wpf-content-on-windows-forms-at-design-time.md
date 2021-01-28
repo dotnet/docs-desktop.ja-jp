@@ -9,15 +9,12 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-author: jillre
-ms.author: jillfra
-manager: jillfra
-ms.openlocfilehash: f00beea138cb623879e28f893775ab7bb4933d52
-ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.openlocfilehash: a4df7799741df7c47ae21e675d9e37f51a60f49a
+ms.sourcegitcommit: 7f48b9ecf8a30db42c8ecea0dd4df577736631a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96981164"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957371"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>チュートリアル: デザイン時の Windows フォームでの新しい WPF コンテンツの作成
 
@@ -27,7 +24,7 @@ ms.locfileid: "96981164"
 
 このチュートリアルを完了するには Visual Studio が必要です。
 
-## <a name="create-the-project"></a>プロジェクトを作成する
+## <a name="create-the-project"></a>プロジェクトの作成
 
 Visual Studio を開き、という名前の Visual Basic または Visual C# で新しい **Windows フォーム App (.NET Framework)** プロジェクトを作成し `HostingWpf` ます。
 

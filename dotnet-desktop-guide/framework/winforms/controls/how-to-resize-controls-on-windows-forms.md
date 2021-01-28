@@ -9,15 +9,12 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-author: jillre
-ms.author: jillfra
-manager: jillfra
-ms.openlocfilehash: 771de6e3962df241357307b0af7682eb45283892
-ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.openlocfilehash: acae4ec6ec0aab8a2a070935b3c1a592bd75753d
+ms.sourcegitcommit: 7f48b9ecf8a30db42c8ecea0dd4df577736631a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96974754"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957631"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>方法: Windows フォーム上のコントロールのサイズを変更する
 

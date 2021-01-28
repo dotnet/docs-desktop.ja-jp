@@ -10,15 +10,12 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-author: jillre
-ms.author: jillfra
-manager: jillfra
-ms.openlocfilehash: 3ad9aad026a1a6a1266845736d7651db77fd5d5c
-ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.openlocfilehash: 1b1ad5daab8e62817d94ca6bb942ede293949c88
+ms.sourcegitcommit: 7f48b9ecf8a30db42c8ecea0dd4df577736631a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96982100"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957605"
 ---
 # <a name="walkthrough-author-a-composite-control-with-c"></a>チュートリアル: C を使用した複合コントロールの作成\#
 
@@ -58,7 +55,7 @@ ms.locfileid: "96982100"
     |プロパティ|変更後の値|
     |--------------|---------------|
     |**名前**|`lblDisplay`|
-    |**Text**|`(blank space)`|
+    |**[テキスト]**|`(blank space)`|
     |**TextAlign**|`MiddleCenter`|
     |**フォントのサイズ**|`14`|
 
@@ -256,7 +253,7 @@ ms.locfileid: "96982100"
     |プロパティ|設定|
     |--------------|-------------|
     |**名前**|`lblAlarm`|
-    |**Text**|**知ら!**|
+    |**[テキスト]**|**知ら!**|
     |**TextAlign**|`MiddleCenter`|
     |**[表示]**|`false`|
 
@@ -329,7 +326,7 @@ ms.locfileid: "96982100"
     |プロパティ|値|
     |--------------|-----------|
     |**名前**|`btnAlarmOff`|
-    |**Text**|**Disable Alarm**|
+    |**[テキスト]**|**Disable Alarm**|
 
 3. デザイナーで **[btnAlarmOff]** をダブルクリックします。
 
@@ -377,10 +374,10 @@ ms.locfileid: "96982100"
 
     |コントロール|プロパティ|値|
     |-------------|--------------|-----------|
-    |`label1`|**Text**|`(blank space)`|
+    |`label1`|**[テキスト]**|`(blank space)`|
     ||**名前**|`lblTest`|
     |`dateTimePicker1`|**名前**|`dtpTest`|
-    ||**形式**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|
+    ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|
 
 10. デザイナーで **[dtpTest]** をダブルクリックします。
 

@@ -8,15 +8,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-author: jillre
-ms.author: jillfra
-manager: jillfra
-ms.openlocfilehash: de9e4dc9e358092934e9326dd08c687478fac57b
-ms.sourcegitcommit: 9f6df084c53a3da0ea657ed0d708a72213683084
+ms.openlocfilehash: 7d9766c1bb1812cc5978221ccec42f5eb2c8c4ff
+ms.sourcegitcommit: 7f48b9ecf8a30db42c8ecea0dd4df577736631a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96982103"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957722"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>方法 : 既存の Windows フォーム コントロールから継承する
 
