@@ -3,12 +3,12 @@ title: Windows フォーム アプリを .NET 5 に移行する
 description: .NET Framework Windows フォーム アプリケーションを .NET 5 に移植する方法について学習します。
 ms.date: 11/02/2020
 ms.topic: how-to
-ms.openlocfilehash: 84d12aeb376091aca2f10a750aff6f2fb3471d6f
-ms.sourcegitcommit: cf26656c126a55cfbfc06e2a89fe01c2b8df2b27
+ms.openlocfilehash: adf87df169217a5d190338bf9c4beaec873f0b69
+ms.sourcegitcommit: d7d89e96c827b6e20d9353d34c0aa329fdae0144
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97697420"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506712"
 ---
 # <a name="how-to-migrate-a-windows-forms-desktop-app-to-net-5"></a>Windows フォーム デスクトップ アプリを .NET 5 に移行する方法
 
@@ -163,9 +163,9 @@ ms.locfileid: "97697420"
 
 Windows フォーム プロジェクトには、_Properties/Settings.settings_ や _Properties/Resources.resx_ などの特定のファイルも含まれています。 これらのファイルは、元のプロジェクトで宣言されているため、移行する必要がある場合があります。
 
-これらのエントリを古いプロジェクト ファイルから、新しいプロジェクトの `<ItemGroup>` 要素にコピーします。 エントリをコピーした後、`<Compile Include="value">` または `<EmbeddedResource Include="value">` 要素は、`Include` ではなく代わりに `Update` を使用するように変更します。
+これらのエントリを古いプロジェクト ファイルから、新しいプロジェクトの `<ItemGroup>` 要素にコピーします。 エントリをコピーした後、すべての `<Compile Include="value">` 要素を、`Include` ではなく代わりに `Update` 属性を使用するように変更します。
 
-- _Settings.settings_ ファイルの構成をインポートします。 コード ファイルが既に含まれているため、`<Compile>` エントリの `Update` 属性が `Include` から `Update` に変更されていることに注目してください。
+- _Settings.settings_ ファイルの構成をインポートします。
 
   ```xml
   <ItemGroup>
@@ -186,7 +186,7 @@ Windows フォーム プロジェクトには、_Properties/Settings.settings_ �
   > [!IMPORTANT]
   > **Visual Basic** プロジェクトの場合、通常は _My Project_ フォルダーが使用されますが、C# プロジェクトの場合は通常、既定のプロジェクト設定ファイルには _Properties_ フォルダーが使用されます。
   
-- _properties/Resources.resx_ ファイルなど、_resx_ ファイルの構成をインポートします。 `Include` が `<Compile>` と `<EmbeddedResource>` の両方の要素で `Update` に変更され、`<SubType>` が `<EmbeddedResource>` から削除されたことに注目してください。
+- _properties/Resources.resx_ ファイルなど、_resx_ ファイルの構成をインポートします。 `Include` 属性が `<Compile>` 要素で `Update` に変更され、`<SubType>` が `<EmbeddedResource>` から削除されたことに注目してください。
 
   ```xml
   <ItemGroup>
