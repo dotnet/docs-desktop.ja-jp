@@ -6,7 +6,7 @@ items:
       - name: 概要
         href: overview/index.md
       - name: WPF アプリケーションを作成する
-        href: /visualstudio/get-started/csharp/tutorial-wpf?view=vs-2019
+        href: get-started/create-app-visual-studio.md
   - name: 移行
     items:
       - name: .NET Framework との違い
