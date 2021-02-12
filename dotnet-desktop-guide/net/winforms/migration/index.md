@@ -3,12 +3,12 @@ title: Windows フォーム アプリを .NET 5 に移行する
 description: .NET Framework Windows フォーム アプリケーションを .NET 5 に移植する方法について学習します。
 ms.date: 11/02/2020
 ms.topic: how-to
-ms.openlocfilehash: adf87df169217a5d190338bf9c4beaec873f0b69
-ms.sourcegitcommit: d7d89e96c827b6e20d9353d34c0aa329fdae0144
+ms.openlocfilehash: c855c074090c386f60e783b3a9b2bee9a7704c23
+ms.sourcegitcommit: 0a512a7965f8efa476eb024208479e4432a1fa72
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506712"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100101834"
 ---
 # <a name="how-to-migrate-a-windows-forms-desktop-app-to-net-5"></a>Windows フォーム デスクトップ アプリを .NET 5 に移行する方法
 
@@ -186,11 +186,11 @@ Windows フォーム プロジェクトには、_Properties/Settings.settings_ �
   > [!IMPORTANT]
   > **Visual Basic** プロジェクトの場合、通常は _My Project_ フォルダーが使用されますが、C# プロジェクトの場合は通常、既定のプロジェクト設定ファイルには _Properties_ フォルダーが使用されます。
   
-- _properties/Resources.resx_ ファイルなど、_resx_ ファイルの構成をインポートします。 `Include` 属性が `<Compile>` 要素で `Update` に変更され、`<SubType>` が `<EmbeddedResource>` から削除されたことに注目してください。
+- _properties/Resources.resx_ ファイルなど、_resx_ ファイルの構成をインポートします。 `Include` 属性が `<Compile>` および `<EmbeddedResource>` 要素で `Update` に設定され、`<SubType>` が `<EmbeddedResource>` から削除されていることに注意してください。
 
   ```xml
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx">
+    <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
